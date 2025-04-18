@@ -11,6 +11,13 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      indent: ["error", 2, { SwitchCase: 1 }],
+      quotes: [2, "double"],
+      semi: [2, "always"] 
+    }
+  }
 ];
 
 export default eslintConfig;
