@@ -7,7 +7,8 @@ import type { router } from "../server/root";
 const link = new RPCLink({ 
   url: new URL("/api/rpc", typeof window !== "undefined" ? window.location.href : "http://localhost:3000"),
   headers: () => ({
-    authorization: "Bearer token", 
+    authorization: "Bearer token",  
+    "Content-Type": "application/json",
   }), 
 });
  
