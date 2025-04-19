@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   const {data, isLoading, isError} = useQuery(
-    api.user.list.queryOptions({
-      input: {}
+    api.user.get.queryOptions({
+      input: { id: "123" },  
     }),
   );
 
@@ -37,7 +37,7 @@ export default function Home() {
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
+              src/pages/index.tsxy
             </code>
             .
           </li>
